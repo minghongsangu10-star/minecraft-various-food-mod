@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "age=0": { "model": "various_food:block/crop_block_rice_stage0" },
+    "age=1": { "model": "various_food:block/crop_block_rice_stage0" },
+    "age=2": { "model": "various_food:block/crop_block_rice_stage1" },
+    "age=3": { "model": "various_food:block/crop_block_rice_stage1" },
+    "age=4": {"model": "various_food:block/crop_block_rice_stage2" },
+    "age=5": {"model": "various_food:block/crop_block_rice_stage2"},
+    "age=6": {"model": "various_food:block/crop_block_rice_stage2"},
+    "age=7": {"model": "various_food:block/crop_block_rice_stage3"}
+  }
+}

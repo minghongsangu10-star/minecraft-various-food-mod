@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "various_food:sliced_potato"
+  },
+  "result": "various_food:fried_sliced_potato",
+  "experience": 0.1,
+  "cookingtime": 5
+}

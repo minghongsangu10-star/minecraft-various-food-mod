@@ -1,0 +1,29 @@
+{
+  "weights": {
+    "minecraft:beetroot_soup": -4,
+    "minecraft:cooked_cod": -4,
+    "minecraft:cooked_salmon": -4,
+    "minecraft:mushroom_stew": -4,
+    "minecraft:apple": -2,
+    "minecraft:sweet_berries": -2,
+    "minecraft:glow_berries": -2,
+    "minecraft:potato": -2,
+    "minecraft:carrot": -2,
+    "minecraft:melon_slice": -2,
+    "minecraft:beetroot": -1,
+    "minecraft:dried_kelp": -1,
+    "minecraft:baked_potato": 4,
+    "minecraft:cookie": 4,
+    "minecraft:bread": 5,
+    "minecraft:honey_bottle": 6,
+    "minecraft:cooked_beef": 8,
+    "minecraft:cooked_porkchop": 8,
+    "minecraft:cooked_chicken": 8,
+    "minecraft:cooked_mutton": 8,
+    "minecraft:cooked_rabbit": 8,
+    "minecraft:pumpkin_pie": 8,
+    "minecraft:cake": 2,
+    "various_food:potato_chips": 10,
+    "various_food:rice_ball": 0
+  }
+}

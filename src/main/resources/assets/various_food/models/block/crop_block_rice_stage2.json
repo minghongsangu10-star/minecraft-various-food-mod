@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "various_food:block/crop_block_rice_stage2"
+  }
+}

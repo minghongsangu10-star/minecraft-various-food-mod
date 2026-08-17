@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "RNR",
+    "RRR"
+  ],
+  "key": {
+    "R": {
+      "item": "various_food:item_rice"
+    },
+    "N": {
+      "item": "minecraft:dried_kelp"
+    }
+  },
+  "result": {
+    "item": "various_food:rice_ball",
+    "count": 1
+  }
+}

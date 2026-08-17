@@ -1,0 +1,74 @@
+plugins {
+	id 'fabric-loom' version "${loom_version}"
+	id 'maven-publish'
+	id 'idea'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	maven {
+		name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+	}
+	maven {
+		name = "LadysnakeMods"
+		url = "https://maven.ladysnake.org/releases"
+	}
+	mavenCentral()
+	maven { url = "https://maven.fabricmc.net/" }
+}
+
+loom {
+	splitEnvironmentSourceSets()
+	mods {
+		"various-food" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.2"
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.2"
+
+	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.2"
+	include "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.2"
+
+	modImplementation "maven.modrinth:modmenu:7.2.2"
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 17
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.name}"}
+	}
+}

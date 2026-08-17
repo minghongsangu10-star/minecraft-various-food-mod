@@ -1,0 +1,51 @@
+{
+	"schemaVersion": 1,
+	"id": "various_food",
+	"version": "1.0.0",
+	"name": "Various Food Mod",
+	"description": "This mod adds a variety of foods, but watch out for the risks of obesity!",
+	"authors": [
+		"iemon1"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/various_food/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "com.various_food.Main"
+		],
+		"client": [
+          "com.various_food.client.MainClient"
+		],
+		"fabric-datagen": [
+			"com.various_food.client.MyModDataGenerator"
+		],
+		"cardinal-components": [
+			"com.various_food.nbt.MyModComponent"
+		]
+	},
+	"mixins": [
+		"various-food-mod.mixins.json",
+		{
+			"config": "various-food-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"cardinal-components-base": ">=5.2.2",
+		"cardinal-components-entity": ">=5.2.2"
+	},
+	"custom": {
+		"cardinal-components": [
+			"various_food:body_weight"
+		]
+	}
+}

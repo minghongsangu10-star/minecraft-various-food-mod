@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PSP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "various_food:fried_sliced_potato"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "various_food:potato_chips",
+    "count": 1
+  }
+}

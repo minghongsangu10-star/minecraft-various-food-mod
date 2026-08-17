@@ -1,0 +1,20 @@
+{
+  "potato_chips_eating": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "various_food:potato_chips_eating",
+        "stream": false
+      }
+    ]
+  },
+  "spawn_hallucination": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "various_food:spawn_hallucination",
+        "stream": false
+      }
+    ]
+  }
+}
