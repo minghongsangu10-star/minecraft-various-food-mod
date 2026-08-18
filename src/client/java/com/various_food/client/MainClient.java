@@ -42,6 +42,8 @@ public class MainClient implements ClientModInitializer {
 	public static PingPongValue fogGreen = new PingPongValue(0.05F);
 	public static PingPongValue fogBlue = new PingPongValue(0.05F);
 
+	public static int fogCountdown = 0;
+
 	@Override
 	public void onInitializeClient() {
 
@@ -91,13 +93,15 @@ public class MainClient implements ClientModInitializer {
 			fogGreen.setValue(0.05F);
 			fogBlue.setValue(0.05F);
 
+			fogCountdown = 0;
+
 			return;
 		}
 
 		HUDTimerManager.tick();
 
 		int weight = MyComponent.BODY_WEIGHT.get(client.player).getValue();
-		if (weight >= 300) {
+		if (weight >= 250) {
 
 			fogProgress.update(0.02F);
 			fogRed.update(0.05F);
@@ -107,10 +111,14 @@ public class MainClient implements ClientModInitializer {
 
 			client.options.gamma().set((double) gamma.getValue());
 
-			isEffectActive = true;
+			fogCountdown++;
+			if (fogCountdown == 1200){
+				isEffectActive = true;
+			}
 		}
 		else {
 			isEffectActive = false;
+			fogCountdown = 0;
 		}
 	}
 

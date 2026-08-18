@@ -138,7 +138,6 @@ public class Main implements ModInitializer {
 
 			// 盲目効果の付与
 			new EffectManager().addEffect(player, MobEffects.BLINDNESS, 10);
-			// new EffectManager().addEffect(player, MobEffects.DARKNESS, 30);
 
 			if (!hallucinationSpawnFlag){
 				spawnHallucinationCount++;

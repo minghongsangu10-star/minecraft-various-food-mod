@@ -9,7 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/minghongsangu10-star/minecraft-various-food-mod",
+		"issues": "https://github.com/minghongsangu10-star/minecraft-various-food-mod/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/various_food/icon.png",
